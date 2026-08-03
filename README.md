@@ -1,5 +1,9 @@
 # NORTE — README maestro
 
+## [Abrir la aplicación NORTE](https://norte-moises-personal.moises10giraldo.chatgpt.site)
+
+> Acceso privado a la aplicación personal instalada en la web.
+
 NORTE es una aplicación web personal para Moisés. Reúne el planeador diario, hábitos, diario, finanzas, gestión de imprevistos y una ruta profesional que comienza en desarrollo de software y evoluciona hacia ciberseguridad.
 
 Este documento tiene dos objetivos: enseñarte a usar la aplicación y servirte como guía de estudio para comprender cómo fue construida.
