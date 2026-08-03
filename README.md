@@ -1,4 +1,4 @@
-﻿# NORTE — README maestro
+# NORTE — README maestro
 
 NORTE es una aplicación web personal para Moisés. Reúne el planeador diario, hábitos, diario, finanzas, gestión de imprevistos y una ruta profesional que comienza en desarrollo de software y evoluciona hacia ciberseguridad.
 
@@ -235,3 +235,29 @@ En Ajustes, usa `Restablecer datos`. Antes, crea una copia JSON si quieres conse
 - Un sistema comprensible que también sirva para aprender programación.
 
 NORTE no sustituye tus decisiones: te ayuda a verlas, medirlas y aprender de ellas.
+
+## 15. Preparación para GitHub
+
+El proyecto está preparado para publicarse en GitHub: las dependencias, compilaciones, configuraciones locales y posibles archivos `.env` están excluidos mediante `.gitignore`. También incluye una verificación automática en `.github/workflows/ci.yml` que ejecuta calidad de código y pruebas en cada subida.
+
+Por tratarse de una aplicación personal, se recomienda crear el repositorio como **privado**. Aunque los registros que escribas en la aplicación viven en IndexedDB y no se suben con el código, los datos iniciales contienen tu nombre, rutina, ciudad y objetivos.
+
+Para subirlo cuando estés listo:
+
+```bash
+git remote add origin https://github.com/TU-USUARIO/NOMBRE-DEL-REPOSITORIO.git
+git push -u origin main
+```
+
+Si utilizas GitHub CLI:
+
+```bash
+gh repo create norte-personal --private --source=. --remote=origin --push
+```
+
+Antes de cada publicación ejecuta:
+
+```bash
+npm run lint
+npm run test
+```
