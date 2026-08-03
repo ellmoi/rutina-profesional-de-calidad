@@ -1,11 +1,11 @@
-﻿{
+{
   "name": "NORTE — Sistema personal",
   "short_name": "NORTE",
   "description": "Planeador personal y roadmap profesional de Moisés",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0c1114",
-  "theme_color": "#0c1114",
+  "background_color": "#f7f5f0",
+  "theme_color": "#f7f5f0",
   "lang": "es",
   "icons": [{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
 }

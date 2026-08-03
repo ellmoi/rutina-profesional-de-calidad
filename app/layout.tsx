@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 // METADATOS: nombre, descripción y comportamiento instalable de la aplicación.
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: { icon: "/favicon.svg", apple: "/favicon.svg" },
 };
-export const viewport: Viewport = { themeColor: "#0c1114", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#f7f5f0", width: "device-width", initialScale: 1 };
 
 // LAYOUT RAÍZ: envuelve todas las pantallas y declara el idioma del contenido.
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

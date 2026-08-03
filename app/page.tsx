@@ -40,7 +40,7 @@ const money=new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",maxim
 
 // ── COMPONENTE PRINCIPAL: controla navegación, acciones y persistencia. ──────
 export default function Home(){
- const [view,setView]=useState<View>("Inicio"),[data,setData]=useState<AppData>(initial),[ready,setReady]=useState(false),[light,setLight]=useState(false),[toast,setToast]=useState("");
+ const [view,setView]=useState<View>("Inicio"),[data,setData]=useState<AppData>(initial),[ready,setReady]=useState(false),[light,setLight]=useState(true),[toast,setToast]=useState("");
  const fileRef=useRef<HTMLInputElement>(null);
  useEffect(()=>{if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(()=>undefined);const request=indexedDB.open("norte-personal",1);request.onupgradeneeded=()=>request.result.createObjectStore("state");request.onsuccess=()=>{const get=request.result.transaction("state").objectStore("state").get("profile");get.onsuccess=()=>{if(get.result)setData(get.result);setReady(true)}};request.onerror=()=>setReady(true)},[]);
  useEffect(()=>{if(!ready)return;const request=indexedDB.open("norte-personal",1);request.onsuccess=()=>request.result.transaction("state","readwrite").objectStore("state").put(data,"profile")},[data,ready]);
